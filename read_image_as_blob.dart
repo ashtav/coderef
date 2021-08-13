@@ -1,14 +1,14 @@
 import 'dart:io';
 
 import 'dart:typed_data';
-// import 'package:flutter/services.dart'; -> rootBundle.load('profile.png')
-// export 'package:path_provider/path_provider.dart'; -> await getTemporaryDirectory()
+import 'package:flutter/services.dart'; // rootBundle.load('profile.png')
+export 'package:path_provider/path_provider.dart'; // await getTemporaryDirectory()
 
 // ByteData is Blob
 // The best solution to save image to sqflite is to use ByteData or Blob,
 // source: https://stackoverflow.com/questions/52170790/how-to-save-image-data-to-sqflite-database-in-flutter-for-persistence
 
-Future readImg() async {
+Future readImageAsBlob() async {
   try {
     String dir = '/storage/emulated/0/blanj';
     Directory tempDir = await getTemporaryDirectory();
