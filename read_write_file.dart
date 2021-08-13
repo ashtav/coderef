@@ -53,7 +53,7 @@ Future readFiles() async {
     // });
 
     // get specific file
-    File file = File(dir + '/' + 'todos.json');
+    File file = File(dir + '/' + 'file_name.json');
     if (await file.exists()) {
       String jString = await file.readAsString();
       List<Map<String, dynamic>> map = json.decode(jString).cast<Map<String, dynamic>>();
